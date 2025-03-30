@@ -1,28 +1,3 @@
-$paddingGeneral: 1rem;
-$backGroundNav: #165a5e;
-$backGroundhero: #2b2828;
-$marginGeneral: 1rem;
-$fuenteLetraTitulo: "Rubik Dirt", serif;
-$fuenteLetraParrafo: "Madimi One", serif;
-#contenedor-main {
-    background-color: #787975;
-    
-}
-#titulo-main{
-    color: aliceblue;
-    font-family: $fuenteLetraTitulo;
-    font-size: 2.5rem;
-    padding: $paddingGeneral;
-    overflow: hidden;
-}
-#contenedor-peliculas{
-    padding: $paddingGeneral;
-    
-    img{
-        border-radius: 1rem;
-        
-        width: 50rem;
-    
-    }
-    
+.img-thumbnail{
+    cursor: pointer;
 }

@@ -1,15 +1,16 @@
-<div class="row" id="contenedor-main" >
+<div class="row" >
 
-    <div id="contenedor-peliculas" class="col-md-3 mb-5 text-center" *ngFor="let movie of movies">
-        
-        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="img-thumbnail img-fluid cursor" (click)="onMovieClick(movie)">
+    <div class="col-md-3 mb-5" *ngFor="let movie of movies">
+               
+        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="img-thumbnail img-fluid "  (click)="onMovieClick(movie)" >
+       
         <div>
-            <h3 id="titulo-main" class="mt-2">{{movie.title}}</h3>
+            <h3 class="mt-2">{{movie.title}}</h3>
             
         </div>
-
+        
     </div>
-       
+    
   
    
 </div> 
