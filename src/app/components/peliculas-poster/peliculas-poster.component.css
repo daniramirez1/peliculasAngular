@@ -17,3 +17,7 @@
   border-radius: 1rem;
   width: 50rem;
 }/*# sourceMappingURL=peliculas-poster.component.css.map */
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -15,7 +15,7 @@ export class PeliculasPosterComponent {
   constructor(private router:Router){}
 
   onMovieClick(movie:Movie){
-    this.router.navigate(['/pelucula', movie.id])
+    this.router.navigate(['/pelicula', movie.id])
   }
 
 }
