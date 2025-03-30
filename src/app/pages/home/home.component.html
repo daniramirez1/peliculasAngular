@@ -1,0 +1,27 @@
+        
+        <h1>cartelera</h1>
+        <div class="row" *ngIf="movies.length>0">
+
+          <div class="col">
+            
+            <app-slideshow [movies]="movies"></app-slideshow>
+          </div>
+
+          
+        </div>
+      
+        <app-peliculas-poster [movies]="movies"></app-peliculas-poster>
+      
+     
+  
+   
+  
+  <footer class="final "> 
+  <div class="contenedor-final text-center">
+    <p class="miNombre">Daniel Ramirez</p>
+    <p class="miNombre">Edwin Cruz</p>
+    <p class="miNombre">Valery Barandica</p>
+    <p class="materia">2025 1-DESARROLLO DE SOFTWARE WEB FRONT-END-236N-7A MOM 1 VIRTUAL</p>
+  </div>
+  
+  </footer>

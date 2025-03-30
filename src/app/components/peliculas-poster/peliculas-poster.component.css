@@ -1,0 +1,19 @@
+#contenedor-main {
+  background-color: #787975;
+}
+
+#titulo-main {
+  color: aliceblue;
+  font-family: "Rubik Dirt", serif;
+  font-size: 2.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#contenedor-peliculas {
+  padding: 1rem;
+}
+#contenedor-peliculas img {
+  border-radius: 1rem;
+  width: 50rem;
+}/*# sourceMappingURL=peliculas-poster.component.css.map */

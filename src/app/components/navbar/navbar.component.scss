@@ -1,0 +1,34 @@
+
+/* Variables SASS  */
+$paddingGeneral: 1rem;
+$backGroundNav: #165a5e;
+$backGroundhero: #2b2828;
+$marginGeneral: 1rem;
+$fuenteLetraTitulo: "Rubik Dirt", serif;
+$fuenteLetraParrafo: "Madimi One", serif;
+
+/* seccion navegador*/
+
+.navbar{
+    padding: 1rem;
+    background-color: $backGroundNav;
+    i{
+        font-size: 3rem;
+        color: #D7D9CE;
+        padding: $paddingGeneral;
+    }
+    h2{
+        font-size: 2.5rem;
+        font-family: $fuenteLetraTitulo;
+        color: #13191a;
+    }
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar button{
+    color: #040404;
+    border-color: #13505B;
+}

@@ -1,0 +1,26 @@
+/* Variables SASS  */
+/* seccion navegador*/
+.navbar {
+  padding: 1rem;
+  background-color: #165a5e;
+}
+.navbar i {
+  font-size: 3rem;
+  color: #D7D9CE;
+  padding: 1rem;
+}
+.navbar h2 {
+  font-size: 2.5rem;
+  font-family: "Rubik Dirt", serif;
+  color: #13191a;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar button {
+  color: #040404;
+  border-color: #13505B;
+}/*# sourceMappingURL=navbar.component.css.map */
