@@ -1,6 +1,56 @@
-<div class="row" *ngIf="pelicula">
-    <div class="col-6">
 
+<div class="movie-detail-container" *ngIf="pelicula">
+    <div
+      class="movie-header "
+      [ngStyle]="{'background-image': 'url(' + 'https://image.tmdb.org/t/p/original' + pelicula.backdrop_path + ')'}">
+      <div class="overlay">
+        <div class="row">
+            <h1>{{ pelicula.title }}</h1>
+            <p>{{ pelicula.overview }}</p>
+            <div class="details">
+              <span><strong>Estreno:</strong> {{ pelicula.release_date | date:'longDate' }}</span>
+              <span><strong>Calificación:</strong> {{ pelicula.vote_average }}</span>
+            </div>
+
+        </div>
+
+      </div>
     </div>
-    <div class="col-6"></div>
-</div>
+  
+    <!-- Contenido principal -->
+    <div class="movie-content container">
+      <div class="row">
+        <!-- Sección del póster -->
+        <div class="col-md-4 poster-section">
+          <img [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="{{ pelicula.title }}">
+        </div>
+        <!-- Sección de información detallada -->
+        <div class="col-md-8 info-section">
+          <h2>Detalles</h2>
+          <ul>
+            <li><strong>Idioma:</strong> {{ pelicula.original_language | uppercase }}</li>
+            <li><strong>Popularidad:</strong> {{ pelicula.popularity }}</li>
+            <li><strong>Votos:</strong> {{ pelicula.vote_count }}</li>
+          </ul>
+          <!-- Sección del reparto -->
+          <div class="cast-section" *ngIf="cast && cast.length">
+            <h3>Elenco</h3>
+            <div class="cast-list">
+              <div class="cast-card" *ngFor="let actor of cast">
+                <img [src]="actor.profile_path ? ('https://image.tmdb.org/t/p/w200' + actor.profile_path) : 'assets/no-image.png'"
+                     alt="{{ actor.name }}">
+                <p>{{ actor.name }}</p>
+                <small>{{ actor.character }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Botón de regreso -->
+    <div class="back-button">
+      <button (click)="regresar()">← Regresar</button>
+    </div>
+  </div>
+  
