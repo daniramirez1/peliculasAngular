@@ -1,15 +1,11 @@
 <div class="row" >
 
-<<<<<<< HEAD
+
     <div class="col-md-3 mb-5" *ngFor="let movie of movies">
                
         <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="img-thumbnail img-fluid "  (click)="onMovieClick(movie)" >
        
-=======
-    <div id="contenedor-peliculas" class="col-md-3 mb-5 text-center cursor-pointer" *ngFor="let movie of movies">
-        
-        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="img-thumbnail img-fluid cursor" style="cursor: pointer;" (click)="onMovieClick(movie)">
->>>>>>> 1679ac0722d318673a2d49c7a21350cf4a82c763
+
         <div>
             <h3 class="mt-2">{{movie.title}}</h3>
             

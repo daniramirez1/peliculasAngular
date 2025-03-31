@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 import { CarteleraResponse, Movie } from '../interfaces/cartelera.interface';
+import { MovieDetails } from '../interfaces/details.interface';
+import { captureError } from 'rxjs/internal/util/errorContext';
+import { Cast, Credits } from '../interfaces/credits.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +23,23 @@ private headers = {Authorization:`Bearer ${this.apiKey}`};
       map((response:any)=>response.results)
     )
   }
+
+  peliculaDetalle(id:string){
+    return this.httpClient.get<MovieDetails>(`${this.URL}/movie/${id}?language=es-ES`,{headers:this.headers}).pipe(
+      catchError(err=> of(null))
+    )
+  }
+
+
+  peliculaCreditos(id:string):Observable<Cast[] | null>{
+    return this.httpClient.get<Credits>(`${this.URL}/movie/${id}/credits?language=es-ES`,{headers:this.headers}).pipe(
+
+      map(res=>res.cast),
+      catchError(err=> of(null))
+      )
+
+  }
+
 }
 
 
