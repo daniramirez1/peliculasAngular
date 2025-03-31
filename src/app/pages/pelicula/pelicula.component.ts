@@ -16,7 +16,6 @@ import { Cast } from '../../interfaces/credits.interface';
 export class PeliculaComponent implements OnInit {
   pelicula?: MovieDetails;
   cast : Cast[]=[];
-  // id: string | undefined;
 
   constructor(private activatedRoute: ActivatedRoute, private peliculasSvc: APIService){}
 
@@ -39,9 +38,6 @@ export class PeliculaComponent implements OnInit {
 
         this.pelicula= movie;
         this.cast = cast;
-      // this.id = this.route.snapshot.paramMap
-      // .get('id')!;
-      // console.log('ID:', this.id);
     }
     
   )}
